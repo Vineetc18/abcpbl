@@ -1,0 +1,316 @@
+:root {
+  --primaryColor: hsl(94, 55%, 56%);
+  --hoverColor: hsl(93, 75%, 76%);
+  --paleGreen: hsl(96, 75%, 89%);
+  --whiteColor: hsl(0, 0%, 100%);
+  --blackColor: hsl(0, 0%, 18%);
+  --greyText: hsl(0, 0%, 75%);
+  --bgColor: hsl(113, 11%, 85%);
+  --inputColor: hsl(330, 12%, 97%);
+
+  /* Font Sizes */
+  --biggestFontSize: 2.5rem;
+  --h1FontSize: 1.5rem;
+  --h2FontSize: 1.25rem;
+  --h3FontSize: 1rem;
+  --normalFontSize: 0.938rem;
+  --smallFontSize: 0.813rem;
+  --smallestFontSize: 0.75rem;
+}
+
+html {
+  font-size: 90%;
+}
+
+/* body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background: var(--bgColor);
+} */
+
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
+.icon {
+  font-size: var(--h2FontSize);
+}
+
+img, video {
+  height: auto;
+  width: 100%;
+}
+
+/* Utility Classes */
+.flex {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.column {
+  flex-direction: column;
+}
+
+.message {
+  display: none;
+}
+
+.showMessage {
+  display: block;
+  color: var(--whiteColor);
+  padding: 10px;
+  background: red;
+  border-radius: 3px;
+  text-align: center;
+}
+
+/* Login & Register Page */
+.loginPage,
+.registerPage {
+  height: 100vh;
+  width: 100%;
+  margin: auto;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 7px 50px rgb(214, 223, 213);
+}
+
+.container {
+  display: flex;
+  height: 95vh;
+  width: 60%;
+  margin: auto;
+  justify-content: space-between;
+  border-radius: 10px;
+  background: hsl(0, 0%, 91%);
+}
+
+/* Video Section */
+.videoDiv {
+  position: relative;
+  flex-basis: 50%;
+  display: flex;
+  width: 60%;
+  height: 100%;
+  padding: 0 1.5rem;
+  text-align: center;
+  justify-content: center;
+  flex-direction: column;
+  margin: auto;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.videoDiv video {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+}
+
+.videoDiv .textDiv {
+  position: relative;
+}
+
+.videoDiv .textDiv .title {
+  color: var(--whiteColor);
+  font-size: 35px;
+  font-weight: 800;
+}
+
+.videoDiv .textDiv p {
+  color: var(--whiteColor);
+  padding: 1rem;
+  font-weight: 400;
+}
+
+/* Footer */
+.footerDiv {
+  position: absolute;
+  bottom: 10px;
+  padding: 0 1rem;
+  height: 60px;
+  width: calc(100% - 20px);
+  background: rgba(255, 255, 255, 0.248);
+  justify-content: space-between;
+  align-items: center;
+  backdrop-filter: blur(1px);
+  border-radius: 10px;
+  display: flex;
+}
+
+.footerDiv .text {
+  color: var(--whiteColor);
+}
+
+.footerDiv .btn {
+  background: var(--whiteColor);
+  color: var(--primaryColor);
+  padding: 0.8rem 1.5rem;
+  border-radius: 10px;
+  font-weight: 400;
+  transition: 0.3s ease;
+}
+
+.footerDiv .btn:hover {
+  background-color: var(--hoverColor);
+  color: var(--blackColor);
+}
+
+/* Form Section */
+.formDiv {
+  flex-basis: 50%;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  padding: 2rem;
+}
+
+.headerDiv {
+  text-align: center;
+  padding: 1.5rem 0;
+}
+
+.headerDiv img {
+  width: 60px;
+  padding-bottom: 0.5rem;
+}
+
+.headerDiv h3 {
+  font-size: 25px;
+  color: var(--blackColor);
+  font-weight: 600;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+/* Input Fields */
+.inputDiv label {
+  color: var(--blackColor);
+  font-weight: 400;
+  font-size: 14px;
+  padding: 0.5rem 0;
+  display: block;
+}
+
+.inputDiv .input {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem;
+  background: var(--inputColor);
+  border-radius: 10px;
+}
+
+.inputDiv .icon {
+  color: var(--greyText);
+}
+
+.inputDiv input {
+  background: none;
+  outline: none;
+  border: none;
+  width: 100%;
+  padding: 0.5rem;
+}
+
+/* Buttons */
+.btn {
+  display: flex;
+  padding: 0.8rem;
+  background: var(--primaryColor);
+  border-radius: 10px;
+  color: var(--whiteColor);
+  justify-content: center;
+  font-size: 16px;
+  width: 100%;
+  gap: 0.5rem;
+  transition: 0.3s ease;
+  cursor: pointer;
+}
+
+.btn .icon {
+  font-size: 25px;
+  transition: 0.3s ease;
+}
+
+.btn:hover {
+  background: var(--hoverColor);
+  color: var(--blackColor);
+}
+
+.btn .icon {
+  color: var(--blackColor);
+  transform: translateX(5px);
+}
+
+/* Forgot Password */
+.forgotPassword {
+  font-size: 13px;
+  color: var(--blackColor);
+  opacity: 0.7;
+  text-align: center;
+}
+
+.forgotPassword a {
+  text-decoration: underline;
+  cursor: pointer;
+  opacity: 1;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .container {
+    width: 80%;
+  }
+
+  .videoDiv {
+    width: 100%;
+    padding: 1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    height: auto;
+    width: 90%;
+  }
+
+  .videoDiv {
+    display: none;
+  }
+
+  .formDiv {
+    width: 100%;
+    padding: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  html {
+    font-size: 85%;
+  }
+
+  .headerDiv h3 {
+    font-size: 20px;
+  }
+
+  .btn {
+    font-size: 14px;
+  }
+}

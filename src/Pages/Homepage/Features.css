@@ -1,0 +1,79 @@
+
+.smart-features {
+    text-align: center;
+    padding: 30px 20px;
+  }
+  
+  .title {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  .subtitle {
+    font-size: 1rem;
+    color: gray;
+    margin-bottom: 30px;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+    max-width: 1200px;
+    margin: auto;
+    border: 1px solid grey;
+  }
+  
+  .feature-card {
+    display: flex;
+    align-items: start;
+    padding: 18px;
+    border-radius: 16px; /* Rounded corners */
+    background: white;
+    transition: transform 0.2s ease-in-out;
+    width: 100%; /* Ensures full width */
+    max-width: 900px; /* Adjust max width */
+    margin: auto; /* Centering the cards */
+    
+  }
+  
+  .feature-card:hover {
+    transform: translateY(-3px);
+  }
+  
+  .icon-container {
+    background: #e0f2e9;
+    padding: 12px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 12px;
+  }
+  
+  .icon {
+    font-size: 1.6rem;
+    color: green;
+  }
+  
+  .text-content {
+    text-align: left;
+    flex: 1;
+  }
+  
+  .feature-title {
+    font-size: 1.1rem;
+    font-weight: bold;
+    margin-bottom: 4px;
+  }
+  
+  .feature-description {
+    color: gray;
+    font-size: 0.9rem;
+    line-height: 1.4;
+  }
+  

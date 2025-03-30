@@ -1,0 +1,88 @@
+/* HeroSection.css */
+@import "tailwindcss";
+.hero-section {
+    background: linear-gradient(to bottom, #f0fdf4, #ffffff);
+  }
+  
+  .hero-badge {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 5px 12px;
+    font-weight: 600;
+    color: #047857;
+    background-color: #d1fae5;
+    border-radius: 999px;
+  }
+  
+  .hero-heading {
+    font-size: 3rem;
+    font-weight: bold;
+    color: black;
+    max-width: 900px;
+    line-height: 1.2;
+  }
+  
+  .hero-heading span {
+    color: #047857;
+  }
+  
+  .hero-button {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 24px;
+    font-size: 1.125rem;
+    font-weight: 600;
+    border-radius: 999px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background 0.3s ease;
+  }
+  
+  .hero-button-primary {
+    background-color: #047857;
+    color: white;
+  }
+  
+  .hero-button-primary:hover {
+    background-color: #065f46;
+  }
+  
+  .hero-button-secondary {
+    background-color: white;
+    border: 2px solid #d1d5db;
+    color: black;
+  }
+  
+  .hero-button-secondary:hover {
+    background-color: #f3f4f6;
+  }
+  
+  .hero-stat-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 24px;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .hero-stat-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    height: 48px;
+    color: #047857;
+    background-color: #d1fae5;
+    border-radius: 999px;
+    font-size: 2rem;
+  }
+  
+  .hero-stat-number {
+    margin-top: 8px;
+    font-size: 2rem;
+    font-weight: bold;
+  }
+  
