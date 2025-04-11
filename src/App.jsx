@@ -7,8 +7,8 @@ import Login from './Components/Login/Login';
 import Register from './Components/Register/Regiser';
 import Volunteer from "./Pages/Volunteerpage/Volunteer";
 import Dashboard from "./Components/Dashboard/Dashboard";
-import CompostDashboard from "./Components/Dashboard/Rdashboard";
-
+import ProtectedRoute from "./Components/ProtectedRoute";
+import VolunteerProfile from "./Components/VolunteerProfile/VolunteerProfile";
 
 function App() {
   const location = useLocation(); // Get the current route
@@ -16,16 +16,34 @@ function App() {
   return (
     <div>
       {/* Hide Navbar on Login and Register pages */}
-      {!(location.pathname === "/login" || location.pathname === "/Register") && <Navbar />}
+      {!(location.pathname === "/login" || location.pathname === "/register") && <Navbar />}
       
       <Routes>
         <Route path="/" element={<HeroSection />} />
-        <Route path="/update" element={<Update />} />
+        <Route path="/update" element={
+          <ProtectedRoute>
+            <Update />
+          </ProtectedRoute>
+        } />
         <Route path="/login" element={<Login />} />
-        <Route path="/Register" element={<Register />} />
-        <Route path="/Volunteer" element={<Volunteer />} />
-        <Route path="/Dashboard" element={<Dashboard />} />
-        <Route path="/Rdashboard" element={<CompostDashboard />} />
+        <Route path="/register" element={<Register />} />
+        <Route path="/volunteer" element={
+          <ProtectedRoute>
+            <Volunteer />
+          </ProtectedRoute>
+        } />
+        <Route path="/volunteer-profile" element={
+          <ProtectedRoute>
+            <VolunteerProfile />
+          </ProtectedRoute>
+        } />
+        <Route path="/dashboard" element={
+          <ProtectedRoute>
+            <Dashboard />
+          </ProtectedRoute>
+        } />
+        <Route path="/about" element={<HeroSection />} />
+        <Route path="/impact" element={<HeroSection />} />
       </Routes>
     </div>
   );
